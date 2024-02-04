@@ -50,7 +50,7 @@ function mobileecom_setup()
 		*
 		* @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		*/
-	add_theme_support('post-thumbnails', array('post'));
+	add_theme_support('post-thumbnails', array('post', 'footer_our_features', 'footer_brand'));
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
@@ -153,6 +153,7 @@ add_action('widgets_init', 'mobileecom_widgets_init');
 /**
  * Enqueue scripts and styles.
  */
+// $dynamic_version_version = time();
 function mobileecom_scripts()
 {
 	// styles
@@ -163,8 +164,9 @@ function mobileecom_scripts()
 
 	wp_enqueue_style('mobileecom-owl-carousel-min', get_template_directory_uri() . '/assets/css/owl.carousel.min.css', array(), _S_VERSION, 'all');
 	wp_enqueue_style('mobileecom-owl-theme-min', get_template_directory_uri() . '/assets/css/owl.theme.default.min.css', array(), _S_VERSION, 'all');
-	wp_enqueue_style('mobileecom-main-style', get_template_directory_uri() . '/assets/css/main.css', array(), _S_VERSION, 'all');
-	wp_enqueue_style('mobileecom-responsive-style', get_template_directory_uri() . '/assets/css/responsive.css', array(), _S_VERSION, 'all');
+	wp_enqueue_style('mobileecom-main-style', get_template_directory_uri() . '/assets/css/main.css', array(), time(), 'all');
+	// wp_enqueue_style('mobileecom-utilities', get_template_directory_uri() . '/assets/css/utilities.css', array(), time(), 'all');
+	wp_enqueue_style('mobileecom-responsive-style', get_template_directory_uri() . '/assets/css/responsive.css', array(), time(), 'all');
 	wp_enqueue_style('mobileecom-style', get_stylesheet_uri(), array(), _S_VERSION);
 
 	// scripts
@@ -223,9 +225,39 @@ if (defined('JETPACK__VERSION')) {
 function custom_wc_product_gallery_thumbnail_size($size)
 {
 	return array(
-		'width' => 300, // Adjust to your desired width
-		'height' => 300, // Adjust to your desired height
+		'width' => 300,
+		'height' => 300,
 		'crop' => 1,
 	);
 }
 add_filter('woocommerce_get_image_size_gallery_thumbnail', 'custom_wc_product_gallery_thumbnail_size');
+function custom_breadcrumbs()
+{
+	$delimiter = '/';
+	$home = 'Home';
+
+	echo '<a href="' . home_url() . '">' . $home . '</a> ' . $delimiter . ' ';
+
+	if (is_category() || is_single()) {
+		the_category(', ');
+		if (is_single()) {
+			echo ' ' . $delimiter . ' ' . get_the_title();
+		}
+	} elseif (is_page()) {
+		echo get_the_title();
+	} elseif (is_search()) {
+		echo 'Search results for "' . get_search_query() . '"';
+	} elseif (is_404()) {
+		echo 'Error 404';
+	} elseif (is_archive()) {
+		echo 'Archives';
+	} elseif (is_home()) {
+		echo 'Blog';
+	}
+
+	if (get_query_var('paged')) {
+		echo ' (' . __('Page', 'text_domain') . ' ' . get_query_var('paged') . ')';
+	}
+
+	echo '</p>';
+}

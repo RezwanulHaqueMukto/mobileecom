@@ -32,8 +32,10 @@ get_header('shop');
 	<div class="woo-breadcrumb">
 		<?php
 		woocommerce_breadcrumb();
+		echo "hi";
 
 		?>
+		<?php custom_breadcrumbs(); ?>
 	</div>
 </div>
 

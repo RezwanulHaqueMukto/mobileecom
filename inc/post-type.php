@@ -4,10 +4,10 @@ function mobile_ecommerce_post()
 {
 
    $labels_footer_brands = array(
-      'name'                  => _x('Footer Brands', 'Post Type General Name', 'mobileecom'),
-      'singular_name'         => _x('Footer Brand', 'Post Type Singular Name', 'mobileecom'),
-      'menu_name'             => __('Footer Brands', 'mobileecom'),
-      'name_admin_bar'        => __('Footer Brands', 'mobileecom'),
+      'name'                  => _x('Brands', 'Post Type General Name', 'mobileecom'),
+      'singular_name'         => _x('Brand', 'Post Type Singular Name', 'mobileecom'),
+      'menu_name'             => __('Brands', 'mobileecom'),
+      'name_admin_bar'        => __('Brands', 'mobileecom'),
       'archives'              => __('Item Archives', 'mobileecom'),
       'attributes'            => __('Item Attributes', 'mobileecom'),
       'parent_item_colon'     => __('Parent Item:', 'mobileecom'),
@@ -51,13 +51,12 @@ function mobile_ecommerce_post()
       'capability_type'       => 'page',
    );
 
-   register_post_type('footer_brand', $footer_brands_args);
-// Register Custom Post Type footer feature
+   // Register Custom Post Type footer feature
    $label_footer_features  = array(
-      'name'                  => _x('Footer Features', 'Post Type General Name', 'mobileecom'),
-      'singular_name'         => _x('Footer Feature', 'Post Type Singular Name', 'mobileecom'),
-      'menu_name'             => __('Footer Features', 'mobileecom'),
-      'name_admin_bar'        => __('Footer Features', 'mobileecom'),
+      'name'                  => _x('Features', 'Post Type General Name', 'mobileecom'),
+      'singular_name'         => _x('Feature', 'Post Type Singular Name', 'mobileecom'),
+      'menu_name'             => __('Features', 'mobileecom'),
+      'name_admin_bar'        => __('Features', 'mobileecom'),
       'archives'              => __('Item Archives', 'mobileecom'),
       'attributes'            => __('Item Attributes', 'mobileecom'),
       'parent_item_colon'     => __('Parent Item:', 'mobileecom'),
@@ -84,7 +83,7 @@ function mobile_ecommerce_post()
    );
    $args_footer_features = array(
       'label'                 => __('Footer Feature', 'mobileecom'),
-      'description'           => __('GIve feature image', 'mobileecom'),
+      'description'           => __('Give feature image', 'mobileecom'),
       'labels'                =>  $label_footer_features,
       'supports'              => array('title', 'editor', 'thumbnail'),
       'hierarchical'          => false,
@@ -100,6 +99,7 @@ function mobile_ecommerce_post()
       'publicly_queryable'    => true,
       'capability_type'       => 'page',
    );
+   register_post_type('footer_brand', $footer_brands_args);
    register_post_type('footer_our_features', $args_footer_features);
 }
 add_action('init', 'mobile_ecommerce_post', 0);

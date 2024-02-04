@@ -66,10 +66,10 @@ if (empty($product) || !$product->is_visible()) {
 							} ?>
 
 						</li>
-						<li><a href="<?php echo site_url(); ?>/?action=yith-woocompare-view-table&amp;iframe=yes" class="compare button" data-product_id="<?php echo get_the_ID(); ?>" rel="nofollow"><i class="fa fa-retweet"></i></a></li>
+						<li><a href="<?php echo site_url(); ?>/?action=yith-woocompare-view-table&amp;iframe=yes" class="compare button" data-product_id="<?php echo esc_attr(get_the_ID()); ?>" rel="nofollow"><i class="fa fa-retweet"></i></a></li>
 
 						<li>
-					
+
 							<?php echo do_shortcode('[yith_wcwl_add_to_wishlist]');
 							?>
 						</li>
