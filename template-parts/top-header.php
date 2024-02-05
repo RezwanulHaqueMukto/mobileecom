@@ -29,7 +29,10 @@
    <div class="container-fluid">
       <div class="top-header-bottom-content">
          <div class="bottom-part-left-side">
-            <h2>logo</h2>
+            <?php echo the_custom_logo() ;
+       
+
+            ?>
          </div>
          <div class="bottom-part-right">
             <ul>

@@ -34,7 +34,7 @@
 		<header id="masthead" class="site-header">
 			<div class="site-branding">
 				<?php
-				the_custom_logo();
+				
 				if (is_front_page() && is_home()) :
 				?>
 					<h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
@@ -71,9 +71,9 @@
 							<div class="col-lg-3">
 								<div class="nav-search">
 									<form action="<?php echo esc_url(home_url('/')); ?> " method="get">
-										<input type="text" placeholder="Search products" value="<?php echo get_search_query(); ?>" name="s" id="s"  class="nav-search" />
+										<input type="text" placeholder="Search products" value="<?php esc_attr_e(get_search_query()); ?>" name="s" id="s" class="nav-search" />
 										<button type="submit" class="site-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-									
+
 									</form>
 								</div>
 							</div>
