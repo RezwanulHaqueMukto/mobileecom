@@ -13,7 +13,7 @@ class ComBtn extends YITH_Woocompare_Frontend{
             'actionadd' => $this->action_add,
             'actionremove' => $this->action_remove,
             'actionview' => $this->action_view,
-            'added_label' => 'View List',
+            'added_label' => 'Added',
             'table_title' => __( 'Product Comparison', 'yith-woocommerce-compare' ),
             'auto_open' => get_option( 'yith_woocompare_auto_open', 'yes' ),
             'loader'    => YITH_WOOCOMPARE_ASSETS_URL . '/images/loader.gif',

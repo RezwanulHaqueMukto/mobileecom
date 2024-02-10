@@ -209,7 +209,7 @@ require get_template_directory() . '/inc/woocommerce-functions.php';
 /**
  * Yith.
  */
-// require get_template_directory() . '/inc/yith/wishlist.php';
+require get_template_directory() . '/inc/yith/wishlist.php';
 require get_template_directory() . '/inc/yith/compare.php';
 
 /**

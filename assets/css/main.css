@@ -130,6 +130,7 @@ a:hover {
 
 .single__product {
 	background: var(--gray);
+	border-radius: 10px;
 }
 
 .single__product .single-product-content .show a i {
@@ -145,9 +146,9 @@ a:hover {
 	padding: 10px;
 }
 
-.woocommerce ul.products li.product .button {
+/* .woocommerce ul.products li.product .button {
 	margin-top: 0em !important;
-}
+} */
 
 .single-product-content .show {
 	display: flex !important;
@@ -227,13 +228,13 @@ a:hover {
 	text-align: center;
 }
 
-.single-product-content .show {
-	position: absolute;
+/* .single-product-content .show {
+	/* position: absolute; */
 	width: 100%;
 	left: -5%;
 	right: 0%;
 	bottom: 30px;
-}
+} */
 
 .woocommerce span.onsale {
 	height: 20px;
