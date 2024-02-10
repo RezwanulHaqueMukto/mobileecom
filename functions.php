@@ -207,9 +207,11 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/woocommerce-functions.php';
 
 /**
- * Wishlist.
+ * Yith.
  */
-require get_template_directory() . '/inc/wishlist.php';
+// require get_template_directory() . '/inc/yith/wishlist.php';
+require get_template_directory() . '/inc/yith/compare.php';
+
 /**
  * post type.
  */
