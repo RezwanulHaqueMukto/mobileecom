@@ -29,13 +29,15 @@ get_header('shop');
  */
 ?>
 <div class="container">
-	<div class="woo-breadcrumb">
-		<?php
-		woocommerce_breadcrumb();
+	<div class="mobile_ecom_breadcrumb">
+		<div class="woo-breadcrumb">
+			<?php
+			woocommerce_breadcrumb();
 
 
-		?>
+			?>
 
+		</div>
 	</div>
 </div>
 

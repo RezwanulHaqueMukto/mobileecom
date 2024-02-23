@@ -7,6 +7,8 @@
 	--gray: #efefef;
 	--white: #ffffff;
 	--black: #000000;
+	--primary-border-radius: 5px;
+	--secondary-border-radius: 10px;
 }
 
 *,
@@ -16,6 +18,7 @@
 	padding: 0;
 	box-sizing: border-box;
 	scroll-behavior: smooth;
+
 }
 
 img {
@@ -130,7 +133,7 @@ a:hover {
 
 .single__product {
 	background: var(--gray);
-	border-radius: 10px;
+	border-radius: var(--secondary-border-radius);
 }
 
 .single__product .single-product-content .show a i {
@@ -159,54 +162,26 @@ a:hover {
 	margin-top: 0px !important;
 }
 
-.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles))
-	#respond
-	input#submit,
-.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles))
-	a.button,
-.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles))
-	button.button,
-.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles))
-	input.button,
-:where(body:not(.woocommerce-block-theme-has-button-styles))
-	.woocommerce
-	#respond
-	input#submit,
-:where(body:not(.woocommerce-block-theme-has-button-styles))
-	.woocommerce
-	a.button,
-:where(body:not(.woocommerce-block-theme-has-button-styles))
-	.woocommerce
-	button.button,
-:where(body:not(.woocommerce-block-theme-has-button-styles))
-	.woocommerce
-	input.button {
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) #respond input#submit,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) input.button,
+:where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce #respond input#submit,
+:where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce a.button,
+:where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce button.button,
+:where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce input.button {
 	background-color: transparent !important;
 	padding: 0em 0em !important;
 }
 
-.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles))
-	#respond
-	input#submit.added::after,
-.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles))
-	a.button.added::after,
-.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles))
-	button.button.added::after,
-.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles))
-	input.button.added::after,
-:where(body:not(.woocommerce-block-theme-has-button-styles))
-	.woocommerce
-	#respond
-	input#submit.added::after,
-:where(body:not(.woocommerce-block-theme-has-button-styles))
-	.woocommerce
-	a.button.added::after,
-:where(body:not(.woocommerce-block-theme-has-button-styles))
-	.woocommerce
-	button.button.added::after,
-:where(body:not(.woocommerce-block-theme-has-button-styles))
-	.woocommerce
-	input.button.added::after {
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) #respond input#submit.added::after,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button.added::after,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.added::after,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) input.button.added::after,
+:where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce #respond input#submit.added::after,
+:where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce a.button.added::after,
+:where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce button.button.added::after,
+:where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce input.button.added::after {
 	display: none !important;
 }
 
@@ -228,13 +203,13 @@ a:hover {
 	text-align: center;
 }
 
-/* .single-product-content .show {
-	/* position: absolute; */
+.single-product-content .show {
+	position: absolute;
 	width: 100%;
 	left: -5%;
 	right: 0%;
 	bottom: 30px;
-} */
+}
 
 .woocommerce span.onsale {
 	height: 20px;
@@ -258,7 +233,7 @@ a:hover {
 #top-footer .our-feature-inner-content {
 	background: var(--secondary);
 	padding: 10px 50px 10px 5px;
-	border-radius: 5px;
+	border-radius: var(--primary-border-radius);
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
@@ -284,7 +259,7 @@ a:hover {
 #top-footer .brands .our-brands-content .brands-inner-content {
 	border: 1px solid var(--gray);
 	text-align: center;
-	border-radius: 5px;
+	border-radius: var(--primary-border-radius);
 	margin-bottom: 15px;
 }
 
@@ -358,4 +333,34 @@ ul {
 	content: "\25b6";
 	left: -20px;
 	color: var(--primary);
+}
+
+/*? ############################
+/* !########breadcrumb */
+/*?########################### */
+.mobile_ecom_breadcrumb .woo-breadcrumb {
+	border-radius: var(--primary-border-radius);
+	margin-bottom: 2rem;
+	background: var(--primary);
+}
+
+.mobile_ecom_breadcrumb .woo-breadcrumb {
+	padding: 0.7375rem 1rem;
+}
+
+.woocommerce .woocommerce-breadcrumb,
+.woocommerce .woocommerce-breadcrumb a {
+	margin: 0 0 0em;
+	padding: 0;
+	font-size: 18px;
+	color: var(--white);
+}
+
+/*? ############################*/
+/* !########single product */
+/*? ############################ */
+
+.single__product .yith-wcwl-add-button{
+	margin-top: 15px !important;
+
 }
