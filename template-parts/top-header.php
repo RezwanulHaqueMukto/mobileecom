@@ -29,8 +29,8 @@
    <div class="container-fluid">
       <div class="top-header-bottom-content">
          <div class="bottom-part-left-side">
-            <?php echo the_custom_logo() ;
-       
+            <?php echo the_custom_logo();
+
 
             ?>
          </div>
@@ -46,7 +46,7 @@
 
                      <div class="count">
                         <?php
-                        echo  do_shortcode("[yith_wcwl_items_count] ");
+                        echo do_shortcode("[yith_wcwl_items_count] ");
                         ?>
                      </div>
                      <a href="<?php echo esc_url(YITH_WCWL()->get_wishlist_url()); ?>">
@@ -57,14 +57,29 @@
 
                </li>
                <li class="add-to-cart">
-                  <a href="<?php echo wc_get_cart_url(); ?>">
-                     <i class="fa-solid fa-cart-shopping"></i>
+                  <?php
+                  if (WC()->cart->is_empty()) {
+               
+                  ?>
+                     <a href="<?php echo wc_get_cart_url(); ?>">
+                        <i class="fa-solid fa-cart-shopping"></i>
 
-                     <span class="cart-number">
-                        <a class="cart-customlocation"></a>
-                     </span>
+                        <span class="cart-number">
+                           <a class="cart-customlocation"></a>
+                        </span>
 
-                  </a>
+                     </a>
+                  <?php
+                  } else {
+                  ?>
+                     <a class="cart-customlocation" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e('View your shopping cart'); ?>"><?php echo sprintf(_n('%d item', '%d items', WC()->cart->get_cart_contents_count()), WC()->cart->get_cart_contents_count()); ?> – <?php echo WC()->cart->get_cart_total();
+
+
+                                                                                                                                                                                                                                                                              ?></a>
+                  <?php
+                  }
+                  ?>
+
                </li>
             </ul>
          </div>
