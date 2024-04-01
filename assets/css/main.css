@@ -338,6 +338,7 @@ ul {
 /*? ############################
 /* !########breadcrumb */
 /*?########################### */
+
 .mobile_ecom_breadcrumb .woo-breadcrumb {
 	border-radius: var(--primary-border-radius);
 	margin-bottom: 2rem;
