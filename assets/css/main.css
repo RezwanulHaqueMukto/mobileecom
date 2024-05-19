@@ -395,3 +395,21 @@ ul {
 .single__product .compare.button.added:hover {
 	color: var(--gray);
 }
+
+.single_add_to_cart_button.button.alt {
+	background-color: var(--primary) !important;
+	color: var(--white) !important;
+
+	padding: 6px 25px 11px 25px !important;
+}
+
+.woocommerce div.product .entry-summary .cart div.quantity {
+	float: none;
+	margin: 0;
+	display: inline-block;
+}
+
+.woocommerce div.product form.cart .button {
+	vertical-align: middle;
+	float: none;
+}

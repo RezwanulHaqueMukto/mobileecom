@@ -249,3 +249,7 @@ function custom_breadcrumbs()
 
 	echo '</p>';
 }
+/**
+ * woocommerce plus minus button
+ */
+require get_template_directory() . '/inc/woocommerce_plus_minus_button.php';
