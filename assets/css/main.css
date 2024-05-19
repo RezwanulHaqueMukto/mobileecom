@@ -361,7 +361,37 @@ ul {
 /* !########single product */
 /*? ############################ */
 
-.single__product .yith-wcwl-add-button{
+.single__product .yith-wcwl-add-button {
 	margin-top: 15px !important;
 
+}
+
+.single__product .yith-wcwl-add-to-wishlist .delete_item>i {
+	display: none;
+}
+
+/* .single__product  .compare.button.added, */
+.single__product .yith-wcwl-add-to-wishlist .delete_item {
+	border-radius: 10px;
+	padding: 7px 12px;
+	margin-top: 9px;
+	background: var(--white);
+	color: var(--primary);
+	width: 75px;
+	display: inline-block;
+	font-weight: bolder;
+	margin-top: 10px !important;
+}
+
+.single__product .compare.button.added {
+	border-radius: 10px;
+	padding: 10px 12px !important;
+	background-color: var(--white) !important;
+	color: var(--primary);
+	margin-top: 10px !important;
+}
+
+.single__product .yith-wcwl-add-to-wishlist .delete_item:hover,
+.single__product .compare.button.added:hover {
+	color: var(--gray);
 }
