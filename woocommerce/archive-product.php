@@ -60,6 +60,9 @@ get_header('shop');
 	<div class="container">
 		<div class="row  gx-lg-5">
 			<div class="col-lg-9">
+				<div class="shop-page-banner mb-3 ps-1 pe-2">
+					<img class="w-100 " src="<?php echo get_template_directory_uri() ?>/assets/img/banner.png" alt="">
+				</div>
 				<?php
 				if (woocommerce_product_loop()) {
 
@@ -118,18 +121,16 @@ get_header('shop');
 
 			</div>
 			<div class="col-lg-3 ">
-				<?php
-				/**
-				 * Hook: woocommerce_sidebar.
-				 *
-				 * @hooked woocommerce_get_sidebar - 10
-				 */
-				do_action('woocommerce_sidebar');
-
-
-				?>
-
-
+				<div class="product-sidebar">
+					<?php
+					/**
+					 * Hook: woocommerce_sidebar.
+					 *
+					 * @hooked woocommerce_get_sidebar - 10
+					 */
+					do_action('woocommerce_sidebar');
+					?>
+				</div>
 			</div>
 
 		</div>

@@ -195,11 +195,15 @@ require get_template_directory() . '/inc/yith/compare.php';
  * post type.
  */
 require get_template_directory() . '/inc/post-type.php';
+/**
+ * Custom taxonomy.
+ */
 
 /**
  * widgets
  */
 require get_template_directory() . '/inc/custom_widgets.php';
+
 
 
 /**

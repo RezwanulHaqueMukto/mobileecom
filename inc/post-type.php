@@ -4,9 +4,9 @@ function mobile_ecommerce_post()
 {
 
    $labels_footer_brands = array(
-      'name'                  => _x('Brands', 'Post Type General Name', 'mobileecom'),
+      'name'                  => _x('Footer Brands', 'Post Type General Name', 'mobileecom'),
       'singular_name'         => _x('Brand', 'Post Type Singular Name', 'mobileecom'),
-      'menu_name'             => __('Brands', 'mobileecom'),
+      'menu_name'             => __('Footer Brands', 'mobileecom'),
       'name_admin_bar'        => __('Brands', 'mobileecom'),
       'archives'              => __('Item Archives', 'mobileecom'),
       'attributes'            => __('Item Attributes', 'mobileecom'),
