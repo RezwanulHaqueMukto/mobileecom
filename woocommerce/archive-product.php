@@ -122,13 +122,9 @@ get_header('shop');
 			</div>
 			<div class="col-lg-3 ">
 				<div class="product-sidebar">
+					<div class="product-category"></div>
 					<?php
-					/**
-					 * Hook: woocommerce_sidebar.
-					 *
-					 * @hooked woocommerce_get_sidebar - 10
-					 */
-					do_action('woocommerce_sidebar');
+
 					?>
 				</div>
 			</div>

@@ -196,8 +196,9 @@ require get_template_directory() . '/inc/yith/compare.php';
  */
 require get_template_directory() . '/inc/post-type.php';
 /**
- * Custom taxonomy.
+ * Custom taxonomy(custom category).
  */
+require get_template_directory() . '/inc/custom-taxonomy.php';
 
 /**
  * widgets
