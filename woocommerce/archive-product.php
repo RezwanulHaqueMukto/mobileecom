@@ -124,7 +124,7 @@ get_header('shop');
 				<div class="product-sidebar">
 					<div class="product-category"></div>
 					<?php
-
+					get_sidebar();
 					?>
 				</div>
 			</div>
