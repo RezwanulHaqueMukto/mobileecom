@@ -3,11 +3,12 @@
       <div class="top-header-content">
          <div class="left-side">
             <ul>
-
                <li><a href="<?php echo  home_url(); ?>"><span><i class="fa-solid fa-house-user"></i></span>Home</a></li>
+               <li><a href="<?php echo get_permalink(wc_get_page_id('shop')); ?>"><span><i class="fa-solid fa-shop"></i></span>Shop</a></li>
                <li><a href="<?php echo get_permalink(wc_get_page_id('myaccount')); ?>"><span><i class="fa-solid fa-user"></i></span>My Account</a></li>
                <li><a href="<?php echo get_permalink(wc_get_page_id('cart')); ?>"><span><i class="fa-solid fa-cart-shopping"></i></span>Shopping Cart</a></li>
                <li><a href="<?php echo get_permalink(wc_get_page_id('checkout')); ?>"><span><i class="fa-solid fa-check"></i></span>Check Out</a></li>
+            
             </ul>
 
          </div>
