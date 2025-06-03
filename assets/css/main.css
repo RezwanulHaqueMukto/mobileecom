@@ -415,36 +415,61 @@ ul {
 }
 
 /*? ############################*/
-/* !########sidebar brands */
+/* !########shop-page-banner */
+/*? ############################ */
+.shop-page-banner {
+	height: 160px;
+	margin-bottom: 50px;
+}
+
+.shop-page-banner img {
+	max-height: 100%;
+	max-width: 1700px;
+}
+
+/*? ############################*/
+/* !########sidebar brands  and categories*/
 /*? ############################ */
 .mobile_ecom-sidebar .sidebar-brands {
-	position: relative;
+	margin-top: 20px;
 }
 
-.mobile_ecom-sidebar .sidebar-brands h2 {
+.mobile_ecom-sidebar .sidebar-brands,
+.mobile_ecom-sidebar .sidebar-categories {
+	margin-bottom: 2.5rem;
+}
+
+.mobile_ecom-sidebar .sidebar-brands h2,
+.mobile_ecom-sidebar .sidebar-categories h2 {
 	font-size: 2rem;
-	color: var(--primary);
+	background-color: var(--primary);
+border-radius: 5px;
+	color: var(--white);
+	padding: .3rem 1.25rem .6rem 1rem;
 }
 
-.mobile_ecom-sidebar .brand-links {
+.mobile_ecom-sidebar .brand-links,
+.mobile_ecom-sidebar .category-links {
 	font-size: 1.2rem;
 	color: var(--black);
-	padding-bottom: 0.9375rem;
+	padding-bottom:2rem;
 	position: relative;
 
 }
 
-.mobile_ecom-sidebar .brand-links:hover {
+.mobile_ecom-sidebar .brand-links:hover,
+.mobile_ecom-sidebar .category-links:hover {
 	color: var(--primary);
 
 }
 
-.mobile_ecom-sidebar .brand-links:hover::before {
+.mobile_ecom-sidebar .brand-links:hover::before,
+.mobile_ecom-sidebar .category-links:hover::before {
 	position: absolute;
 	content: "\25b6";
 	left: -20px;
 	color: var(--primary);
 	font-size: .8rem;
-	top:+5%;
+	top: +5%;
 
 }
