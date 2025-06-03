@@ -208,7 +208,7 @@ require get_template_directory() . '/inc/custom_widgets.php';
 /**
  * acf options page
  */
- require get_template_directory() . '/inc/acf-optionspage.php';
+require get_template_directory() . '/inc/acf-optionspage.php';
 /**
  * Load Jetpack compatibility file.
  */

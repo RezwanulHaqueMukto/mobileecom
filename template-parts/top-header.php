@@ -26,7 +26,7 @@
    </div>
 
 </div>
-<div class="top-header-bottom">
+<div class="top-header-bottom my-3">
    <div class="container-fluid">
       <div class="top-header-bottom-content">
          <div class="bottom-part-left-side">

@@ -34,7 +34,7 @@ class ComBtn extends YITH_Woocompare_Frontend{
     /**
      *  Add the link to compare
      */
-    public function add_compare_link( $product_id = false, $args = array() ) {
+    public function add_compare_link( $product_id = false, $args = array(), $should_return = false ) {
         extract( $args );
 
         if ( ! $product_id ) {

@@ -32,30 +32,11 @@
 		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'mobileecom'); ?></a>
 		<?php get_template_part('template-parts/top-header', 'top-header') ?>
 		<header id="masthead" class="site-header">
-			<div class="site-branding">
-				<?php
-				
-				if (is_front_page() && is_home()) :
-				?>
-					<h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
-				<?php
-				else :
-				?>
-					<p class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></p>
-				<?php
-				endif;
-				$mobileecom_description = get_bloginfo('description', 'display');
-				if ($mobileecom_description || is_customize_preview()) :
-				?>
-					<p class="site-description"><?php echo $mobileecom_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
-															?></p>
-				<?php endif; ?>
-			</div><!-- .site-branding -->
-
+		
 			<nav id="site-navigation" class="main-navigation">
 				<div class="container-fluid catmenu-container">
 					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'mobileecom'); ?></button>
-					<div class="catmenu-content container">
+					<div class="catmenu-content container py-1">
 						<div class="row">
 							<div class="col-lg-9 ">
 								<?php

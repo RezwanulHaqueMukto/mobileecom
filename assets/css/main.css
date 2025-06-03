@@ -413,3 +413,38 @@ ul {
 	vertical-align: middle;
 	float: none;
 }
+
+/*? ############################*/
+/* !########sidebar brands */
+/*? ############################ */
+.mobile_ecom-sidebar .sidebar-brands {
+	position: relative;
+}
+
+.mobile_ecom-sidebar .sidebar-brands h2 {
+	font-size: 2rem;
+	color: var(--primary);
+}
+
+.mobile_ecom-sidebar .brand-links {
+	font-size: 1.2rem;
+	color: var(--black);
+	padding-bottom: 0.9375rem;
+	position: relative;
+
+}
+
+.mobile_ecom-sidebar .brand-links:hover {
+	color: var(--primary);
+
+}
+
+.mobile_ecom-sidebar .brand-links:hover::before {
+	position: absolute;
+	content: "\25b6";
+	left: -20px;
+	color: var(--primary);
+	font-size: .8rem;
+	top:+5%;
+
+}
